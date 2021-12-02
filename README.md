@@ -5,6 +5,10 @@ puzzles can be found here: https://adventofcode.com/2021
 
 ## Lessons Learned
 
+### Algorithms
+
+Imaginary numbers can be used to represent a 2D coordinate system.
+
 ### Numpy
 
 Numpy convolve can be used to implement a custom moving average:
