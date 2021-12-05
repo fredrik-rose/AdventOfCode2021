@@ -7,7 +7,15 @@ puzzles can be found here: https://adventofcode.com/2021
 
 ### Algorithms
 
+#### Represent 2D Coordinate System with Imaginary Numbers
+
 Imaginary numbers can be used to represent a 2D coordinate system.
+
+#### Representation of 2D Board
+
+A dict where the keys are 2D coordinates can be used to represent a 2D board as an alternative to a 2D matrix.
+
+#### Iterating over Sequence with Multiple Stop Conditions
 
 A generator can be used if one wants to iterate over a sequence with multiple stop conditions:
 ```
@@ -29,7 +37,35 @@ def variant_b(data):
 def generator(data):
     for e in data:
         yield e
+```
 
+#### Line Representation
+
+Vertical lines can be problematic to represent with the usual line equation `y = kx+m`. There are several other ways
+to represent lines.
+
+##### General Equation
+```
+a * x + b * y - c = 0
+```
+```
+a = (y1 - y2)
+b = (x2 - x1)
+c = (x2 * y1 - x1 * y2)
+```
+
+
+##### Parametric Approach
+
+```
+Base = P1
+Direction = P2 - P1 (may be normalized)
+```
+
+Any point at the line might be described using parameter t
+```
+x(t) = x1 + t * Direction.X
+y(t) = y1 + t * Direction.Y
 ```
 
 ### Python
