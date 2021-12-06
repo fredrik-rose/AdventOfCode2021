@@ -54,7 +54,6 @@ b = (x2 - x1)
 c = (x2 * y1 - x1 * y2)
 ```
 
-
 ##### Parametric Approach
 
 ```
@@ -67,6 +66,11 @@ Any point at the line might be described using parameter t
 x(t) = x1 + t * Direction.X
 y(t) = y1 + t * Direction.Y
 ```
+
+#### Change of Representation
+
+Sometimes it might be a good idea to collect all things of a certain type and perform operation on all of them at
+once, instead of treating them individually. Math is not always the solution. See day 6 as an example.
 
 ### Python
 
