@@ -72,6 +72,10 @@ y(t) = y1 + t * Direction.Y
 Sometimes it might be a good idea to collect all things of a certain type and perform operation on all of them at
 once, instead of treating them individually. Math is not always the solution. See day 6 as an example.
 
+#### Minimum Distance
+
+The position that has the minimum total distance to a collections of positions is the median position.
+
 ### Python
 
 Extracts all integers in a line:
