@@ -76,6 +76,10 @@ once, instead of treating them individually. Math is not always the solution. Se
 
 The position that has the minimum total distance to a collections of positions is the median position.
 
+#### Flood Fill
+
+See day 09.
+
 ### Python
 
 Extracts all integers in a line:
@@ -90,4 +94,19 @@ Numpy convolve can be used to implement a custom moving average:
 
 ```
 np.convolve(signal, np.ones(N), mode='valid')
+```
+
+### SciPy
+
+scipy.ndimage.generic_filter can be really useful for various filter-like operations. An example that find (strict)
+valleys:
+```
+footprint = np.array([[0, 1, 0],
+                     [1, 1, 1],
+                     [0, 1, 0]])
+vallies = ndi.generic_filter(heightmap,
+                             function=lambda x: all(x[2] < e for i, e in enumerate(x) if i != 2),
+                             footprint=footprint,
+                             mode='constant',
+                             cval=np.max(heightmap) + 1).astype(bool)
 ```
