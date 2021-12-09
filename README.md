@@ -88,6 +88,8 @@ def extract_ints(line):
     return [int(x) for x in re.findall(r'-?\d+', line)]
 ```
 
+A stack can easily be implemented using a list.
+
 ### Numpy
 
 Numpy convolve can be used to implement a custom moving average:
