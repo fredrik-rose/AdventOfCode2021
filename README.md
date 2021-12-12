@@ -80,6 +80,10 @@ The position that has the minimum total distance to a collections of positions i
 
 See day 09.
 
+#### Graph Representation
+
+A graph can be represented as a dict of sets, where the keys are the nodes and the values are the connections.
+
 ### Python
 
 Extracts all integers in a line:
@@ -89,6 +93,10 @@ def extract_ints(line):
 ```
 
 A stack can easily be implemented using a list.
+
+Be careful with dangerous default function parameters (e.g. lists and dicts). If altered in the function the values
+will be kept top next function call. Avoid if possible otherwise it may be a good practice to make a copy of it
+at the start of the function.
 
 ### Numpy
 
