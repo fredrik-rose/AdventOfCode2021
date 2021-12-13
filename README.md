@@ -98,12 +98,25 @@ Be careful with dangerous default function parameters (e.g. lists and dicts). If
 will be kept top next function call. Avoid if possible otherwise it may be a good practice to make a copy of it
 at the start of the function.
 
+Unpack a list of tuples to two lists:
+```
+x, y = zip(*coordinates)
+```
+
 ### Numpy
 
 Numpy convolve can be used to implement a custom moving average:
 
 ```
 np.convolve(signal, np.ones(N), mode='valid')
+```
+
+Visualize a numpy array as an image (created from a list of coordinates):
+```
+image = np.zeros((max(y) + 1, max(x) + 1))
+image[y, x] = 1
+plt.imshow(image)
+plt.show()
 ```
 
 ### SciPy
