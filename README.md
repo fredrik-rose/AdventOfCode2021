@@ -70,7 +70,8 @@ y(t) = y1 + t * Direction.Y
 #### Change of Representation
 
 Sometimes it might be a good idea to collect all things of a certain type and perform operation on all of them at
-once, instead of treating them individually. Math is not always the solution. See day 6 as an example.
+once, instead of treating them individually. E.g. frequency counting. Math is not always the solution.
+See day 6 and 14 as examples.
 
 #### Minimum Distance
 
