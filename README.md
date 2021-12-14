@@ -7,6 +7,14 @@ puzzles can be found here: https://adventofcode.com/2021
 
 ### Algorithms
 
+#### A*
+
+A* is basically Dijkstra's algorithm with an added heuristic that aids in the selection of the next node to visit.
+One such heuristics might be the number of nodes between the current node and the end node. See day 15 for an
+implementation. Do however note that the graph representation is a bit awkward, it is not the typical dict of sets.
+
+If the graph is a grid the number of nodes in between may not be a good heuristic.
+
 #### Represent 2D Coordinate System with Imaginary Numbers
 
 Imaginary numbers can be used to represent a 2D coordinate system.
@@ -103,6 +111,8 @@ Unpack a list of tuples to two lists:
 ```
 x, y = zip(*coordinates)
 ```
+
+heapq can be used to implement a priority queue.
 
 ### Numpy
 
