@@ -114,6 +114,10 @@ x, y = zip(*coordinates)
 
 heapq can be used to implement a priority queue.
 
+Use itertools.islice to extract the first n elements of a generator.
+
+Python 3.10 introduce switch-statements.
+
 ### Numpy
 
 Numpy convolve can be used to implement a custom moving average:
