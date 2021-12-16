@@ -1,3 +1,6 @@
+import re
+
+
 def bin_to_int(x):
     # Converts a string of bits to an integer.
     if not x:
@@ -8,3 +11,8 @@ def bin_to_int(x):
 def hex_to_bin(x):
     # Converts a string of hexadecimal numbers to a string of bits (preserving leading zeros).
     return bin(int(x, 16))[2:].zfill(len(x) * 4)
+
+
+def extract_ints(text):
+    # Extracts all integers.
+    return [int(x) for x in re.findall(r'-?\d+', text)]
