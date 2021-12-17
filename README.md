@@ -118,6 +118,27 @@ Use itertools.islice to extract the first n elements of a generator.
 
 Python 3.10 introduce switch-statements.
 
+#### Integer Rounding
+
+Round down:
+```
+x // 2
+```
+
+Round up:
+```
+-(-x // 2)
+```
+
+#### Insert in Place
+
+```
+>>> a = [1,2,3,4,5]
+>>> a[2:4] = [9]
+>>> a
+[1, 2, 9, 5]
+```
+
 ### Numpy
 
 Numpy convolve can be used to implement a custom moving average:
