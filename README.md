@@ -23,6 +23,8 @@ Imaginary numbers can be used to represent a 2D coordinate system.
 
 A dict where the keys are 2D coordinates can be used to represent a 2D board as an alternative to a 2D matrix.
 
+A board with on/off values can be represented as a set of coordinates, the positions in the set represents on values.
+
 #### Iterating over Sequence with Multiple Stop Conditions
 
 A generator can be used if one wants to iterate over a sequence with multiple stop conditions:
@@ -80,6 +82,10 @@ y(t) = y1 + t * Direction.Y
 Sometimes it might be a good idea to collect all things of a certain type and perform operation on all of them at
 once, instead of treating them individually. E.g. frequency counting. Math is not always the solution.
 See day 6 and 14 as examples.
+
+#### Point Correspondence
+
+Linear regression could be used to find the rotation and translation from one set of points to another set of points.
 
 #### Minimum Distance
 
@@ -140,6 +146,8 @@ Round up:
 ```
 
 ### Numpy
+
+Moving back and forth between Numpy and Python data structures seems really slow.
 
 Numpy convolve can be used to implement a custom moving average:
 
