@@ -7,6 +7,27 @@ puzzles can be found here: https://adventofcode.com/2021
 
 ### Algorithms
 
+#### Dynamic Programming
+
+Dynamic programming is basically brute force with memoization, it can be useful if a certain "state" occurs in
+several of the "paths".
+```
+DP = {}
+def fibonacci(n):
+    if n in DP:
+        return DP[n]
+    elif n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        DP[n] = fibonacci(n - 1) + fibonacci(n - 2)
+        return DP[n]
+```
+
+This can easily be implemented in Python using the @functools.lru_cache decorator. Then we do not have to manage
+the dynamic programming logic ourselves.
+
 #### A*
 
 A* is basically Dijkstra's algorithm with an added heuristic that aids in the selection of the next node to visit.
