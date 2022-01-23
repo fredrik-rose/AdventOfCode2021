@@ -36,6 +36,32 @@ implementation. Do however note that the graph representation is a bit awkward, 
 
 If the graph is a grid the number of nodes in between may not be a good heuristic.
 
+#### Sweep Line
+
+Algorithm that can be used to process (typically overlapping) objects in an euclidean coordinate system. Could e.g.
+be used to split overlapping rectangles (into non-overlapping rectangles):
+
+1. Create two events for each rectangle: an 'on' event for the min x coordinate and an 'off' event for the max x
+   coordinate. Each event shall contain a reference to the corresponding rectangle.
+2. Sort the events on coordinates, for equal coordinates an 'off' event should come before an 'on' event.
+3. Create an empty set of active rectangles.
+4. Iterate over the sorted events, add the rectangle to the active set for an 'on' event, remove it for an 'off' event.
+   Do step 1. and 2. for the active rectangles but this time with the y coordinates to create new events. Iterate over
+   the new events, create a rectangle starting at the current x, y event and ending on the next x, y event.
+
+An example of another application is to calculate the area of overlapping rectangles.
+
+See day 22 for an example (splitting overlapping cuboids).
+
+See these references for more information:
+
+* https://tryalgo.org/en/geometry/2016/06/25/union-of-rectangles/
+* https://leetcode.com/problems/rectangle-area-ii/solution/
+* https://stackoverflow.com/questions/12769386/how-to-calculate-total-volume-of-multiple-overlapping-cuboids
+* https://stackoverflow.com/questions/244452/what-is-an-efficient-algorithm-to-find-area-of-overlapping-rectangles
+
+Another (not really related) alternative is to use coordinate compression.
+
 #### Represent 2D Coordinate System with Imaginary Numbers
 
 Imaginary numbers can be used to represent a 2D coordinate system.
