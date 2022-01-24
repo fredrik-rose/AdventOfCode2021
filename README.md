@@ -31,10 +31,17 @@ the dynamic programming logic ourselves.
 #### A*
 
 A* is basically Dijkstra's algorithm with an added heuristic that aids in the selection of the next node to visit.
-One such heuristics might be the number of nodes between the current node and the end node. See day 15 for an
-implementation. Do however note that the graph representation is a bit awkward, it is not the typical dict of sets.
+One such heuristics might be the number of nodes between the current node and the end node. Note that the heuristic
+should not over-estimate the actual distance. See day 15 and 23 for example implementations. Do however note that the
+graph representation in day 15 is a bit awkward, it is not the typical dict of sets. Day 23 do not even create graph,
+it operates on a state space and the neighbors of a particular state (i.e. node) is given by the neighbors function.
 
 If the graph is a grid the number of nodes in between may not be a good heuristic.
+
+#### State Space as Graph
+
+A state space problem (e.g. states in a game) can be considered as a graph problem where each state is a node in the
+graph. A path search algorithm (e.g. A\*) can then be used to find the shortest path from one state to another.
 
 #### Sweep Line
 
@@ -170,6 +177,13 @@ heapq can be used to implement a priority queue.
 Use itertools.islice to extract the first n elements of a generator.
 
 Python 3.10 introduce switch-statements.
+
+#### Profiling
+
+```
+python -m cProfile -o data.prof my_script.py
+snakeviz data.prof
+```
 
 #### Integer Rounding
 
