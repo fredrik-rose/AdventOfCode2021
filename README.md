@@ -153,6 +153,10 @@ See day 09.
 
 A graph can be represented as a dict of sets, where the keys are the nodes and the values are the connections.
 
+#### Reverse Engineering
+
+Sometimes reverse engineering is the best solution. Reverting math functions may also be useful. See day 24.
+
 ### Python
 
 Extracts all integers in a line:
